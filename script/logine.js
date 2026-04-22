@@ -15,6 +15,12 @@ document.getElementById('logine-btn')
     if(ConstNumber === '01700000000' && ConstPin === '1234'){
          // 3-1 True    >> alert > home
         alert('Login successful!')
+
+        // window.location.replace("/home.html");
+         window.location.assign("/home.html");
+
+
+
     }
    else{
        // 3-2 false   >> alert >  return to login page

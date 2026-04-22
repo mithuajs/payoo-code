@@ -12,7 +12,7 @@ document.getElementById('logine-btn')
    console.log(ConstPin);
 
     // 3 check the mobile number and pin
-    if(ConstNumber === '01700000000' && ConstPin === '1234'){
+    if(ConstNumber === '01857810423' && ConstPin === '1212'){
          // 3-1 True    >> alert > home
         alert('Login successful!')
 

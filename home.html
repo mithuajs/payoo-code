@@ -95,6 +95,7 @@
             <div class="card-body">
                 <fieldset class="fieldset">
                     <label class="label text-neutral font-bold"> Select Bank </label>
+
                     <select id="add-money-bank" class="select">
                         <option disabled selected>Select a Bank</option>
                         <option value="DBBL">DBBL</option>
@@ -103,24 +104,24 @@
                     </select>
 
                     <label class="label text-neutral font-bold"> Bank Account Number</label>
-                    <input id="agent-number" maxlength="11" minlength="11" type="text"
+                    <input id="add-Money-number" maxlength="11" minlength="11" type="text"
                         class="input rounded-full w-full " placeholder=" Enter 11 digit account number" />
 
                     <br>
                     <label class="label text-neutral font-bold"> Amount to Add</label>
-                    <input id="amount-add" maxlength="11" minlength="11" type="number"
+                    <input id="add-Money-amount" maxlength="11" minlength="11" type="number"
                         class="input rounded-full w-full " placeholder="Add Amount to withdraw" />
 
                     <br>
 
                     <label class="label text-neutral font-bold">Pin Number</label>
-                    <input id="cashout-pin" maxlength="4" minlength="4" type="password"
+                    <input id="add-money-pin" maxlength="4" minlength="4" type="password"
                         class="input rounded-full w-full" placeholder=" Enter 4 Digit Pin Number" />
                     <button id="addMoney-btn" class="btn btn-neutral mt-4 rounded-full bg-primary">Add Money</button>
                 </fieldset>
             </div>
         </div>
-
+  
     </section>
 
 
@@ -153,8 +154,10 @@
 
     </section>
 
-    <script src="./script/machine.js"></script>
 
+
+    <script src="./script/machine.js"></script>
+    <script src="./script/addmoney.js"></script>
     <script src="./script/cashout.js"></script>
 
 </body>

@@ -53,7 +53,7 @@
         </section>
     </header>
 
-     <!-- card section -->
+    <!-- card section -->
 
     <section class=" w-11/12 mx-auto  py-10 space-y-5">
         <h2 class=" text-3xl font-bold">Welcome to Pay<span class="text-primary">oo</span></h2>
@@ -88,10 +88,45 @@
     </section>
 
 
-    
+    <!-- add money section -->
+    <section id="add-money" class=" w-11/12 mx-auto py-5 ">
+        <h2 class="text-xl font-bold mb-5"> Add Money</h2>
+        <div class="card bg-base-100 w-full  shadow mx-auto rounded-2xl">
+            <div class="card-body">
+                <fieldset class="fieldset">
+                    <label class="label text-neutral font-bold"> Select Bank </label>
+                    <select id="add-money-bank" class="select">
+                        <option disabled selected>Select a Bank</option>
+                        <option value="DBBL">DBBL</option>
+                        <option value="IBBL">IBBL</option>
+                        <option value="City Bank">City Bank</option>
+                    </select>
+
+                    <label class="label text-neutral font-bold"> Bank Account Number</label>
+                    <input id="agent-number" maxlength="11" minlength="11" type="text"
+                        class="input rounded-full w-full " placeholder=" Enter 11 digit account number" />
+
+                    <br>
+                    <label class="label text-neutral font-bold"> Amount to Add</label>
+                    <input id="amount-add" maxlength="11" minlength="11" type="number"
+                        class="input rounded-full w-full " placeholder="Add Amount to withdraw" />
+
+                    <br>
+
+                    <label class="label text-neutral font-bold">Pin Number</label>
+                    <input id="cashout-pin" maxlength="4" minlength="4" type="password"
+                        class="input rounded-full w-full" placeholder=" Enter 4 Digit Pin Number" />
+                    <button id="addMoney-btn" class="btn btn-neutral mt-4 rounded-full bg-primary">Add Money</button>
+                </fieldset>
+            </div>
+        </div>
+
+    </section>
+
+
     <!-- cashout section -->
 
-    <section id="cashout" class=" w-11/12 mx-auto py-5">
+    <section id="cashout" class=" w-11/12 mx-auto py-5 hidden">
         <h2 class="text-xl font-bold mb-5">Cashout</h2>
         <div class="card bg-base-100 w-full  shadow mx-auto rounded-2xl">
             <div class="card-body">
@@ -102,15 +137,16 @@
 
                     <br>
                     <label class="label text-neutral font-bold"> Amount</label>
-                    <input id="amount" maxlength="11" minlength="11" type="number"
-                        class="input rounded-full w-full " placeholder=" Enter amount to withdraw" />
+                    <input id="amount" maxlength="11" minlength="11" type="number" class="input rounded-full w-full "
+                        placeholder=" Enter amount to withdraw" />
 
                     <br>
 
-                    <label class="label text-neutral font-bold">  PIN Number</label>
-                    <input id="cashout-pin" maxlength="4" minlength="4" type="password" class="input rounded-full w-full"
-                        placeholder=" Enter 4 Digit Pin Number" />
-                    <button id="cashout-btn" class="btn btn-neutral mt-4 rounded-full bg-primary">Withdraw Money</button>
+                    <label class="label text-neutral font-bold"> PIN Number</label>
+                    <input id="cashout-pin" maxlength="4" minlength="4" type="password"
+                        class="input rounded-full w-full" placeholder=" Enter 4 Digit Pin Number" />
+                    <button id="cashout-btn" class="btn btn-neutral mt-4 rounded-full bg-primary">Withdraw
+                        Money</button>
                 </fieldset>
             </div>
         </div>

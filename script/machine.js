@@ -15,6 +15,15 @@ console.log (" current balance: ", Number(balance));
 return Number(balance);
 }
 
+//add money --> balance
+function getaddMoneyBalance(){
+    const ADDbalanceElement = document.getElementById('amount-add');
+    const ADDbalance = ADDbalanceElement.innerText;
+    console.log (" current balance: ", Number(amount-add));
+    return Number(amount-add);
+}
+
+
 // machine value --> balance
 function SetBalance (value){
     const balanceElement = document.getElementById('balance');

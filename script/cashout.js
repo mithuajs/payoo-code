@@ -1,14 +1,14 @@
 document.getElementById('cashout-btn')
     .addEventListener('click', function () {
         const CashoutAgentNumber = getValueFromInput('agent-number');
-        if(CashoutAgentNumber.length !== 11){
+        if (CashoutAgentNumber.length !== 11) {
             alert("invalid agent number")
             return;
         }
         //2 get the amount
         const CashoutAmountString = getValueFromInput('amount');
 
-            const currentBalance = getBalance();
+        const currentBalance = getBalance();
         //  4 calculate the new balance 
         const newBalance = currentBalance - Number(CashoutAmountString);
 
@@ -28,7 +28,43 @@ document.getElementById('cashout-btn')
             alert("invalid pin")
             return;
         }
-       
+
+
+    })
+
+
+
+document.getElementById('cashout-btn')
+    .addEventListener('click', function () {
+        const CashoutAgentNumber = getValueFromInput('agent-number');
+        if (CashoutAgentNumber.length !== 11) {
+            alert("invalid agent number")
+            return;
+        }
+        //2 get the amount
+        const CashoutAmountString = getValueFromInput('amount');
+
+        const currentBalance = getBalance();
+        //  4 calculate the new balance 
+        const newBalance = currentBalance - Number(CashoutAmountString);
+
+        console.log("New Balance: ", newBalance);
+        if (newBalance < 0) {
+            alert("invalid amount")
+            return;
+        }
+
+        // 5 get the pin  and verify
+
+        const pin = getValueFromInput('cashout-pin');
+        if (pin === '1212') {
+            alert("cashout successful")
+            SetBalance(newBalance);
+        } else {
+            alert("invalid pin")
+            return;
+        }
+
 
     })
 
@@ -51,7 +87,7 @@ document.getElementById('cashout-btn')
 //         const balanceElement = document.getElementById('balance');
 //         const balanceString = balanceElement.innerText;
 //         console.log(balanceString);
-//         //  4 calculate the new balance 
+//         //  4 calculate the new balance
 
 //         const newBalance = Number(balanceString) - Number(CashoutAmountString);
 
@@ -74,7 +110,7 @@ document.getElementById('cashout-btn')
 //             return;
 //         }
 //         //5-1 True: show an alert > set balance
-//         //5-1 False: show an alert > return 
+//         //5-1 False: show an alert > return
 
 
 //     })

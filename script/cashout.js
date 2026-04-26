@@ -8,7 +8,6 @@ document.getElementById('cashout-btn')
         //2 get the amount
         const CashoutAmountString = getValueFromInput('amount');
 
-
             const currentBalance = getBalance();
         //  4 calculate the new balance 
         const newBalance = currentBalance - Number(CashoutAmountString);
@@ -24,8 +23,7 @@ document.getElementById('cashout-btn')
         const pin = getValueFromInput('cashout-pin');
         if (pin === '1212') {
             alert("cashout successful")
-            console.log("New Balance: ", newBalance);
-            document.getElementById("bl") = newBalance;
+            SetBalance(newBalance);
         } else {
             alert("invalid pin")
             return;

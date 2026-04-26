@@ -14,3 +14,10 @@ const balance = balanceElement.innerText;
 console.log (" current balance: ", Number(balance));
 return Number(balance);
 }
+
+// machine value --> balance
+function SetBalance (value){
+    const balanceElement = document.getElementById('balance');
+    balanceElement.innerText = value;
+
+}

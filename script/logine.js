@@ -17,7 +17,7 @@ document.getElementById('logine-btn')
         alert('Login successful!')
 
         // window.location.replace("/home.html");
-         window.location.assign("/home.html");
+         window.location.assign("./home.html");
 
 
 

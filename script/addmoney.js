@@ -18,18 +18,30 @@ document.getElementById("addMoney-btn").addEventListener("click", function () {
     //3- get amount
 
     const ADDMoneyAmount = getValueFromInput("add-Money-amount");
-    const currentBalance = getBalance(); 
+    const currentBalance = getBalance();
     const NewBalance = currentBalance + Number(ADDMoneyAmount);
     console.log(NewBalance);
 
     const pin = getValueFromInput("add-money-pin");
-    if( pin === "1212" ){
-        alert (`Add Money Success From ${BankAccount} at ${new Date()}`);
+    if (pin === "1212") {
+        alert(`Add Money Success From ${BankAccount} at ${new Date()}`);
         SetBalance(NewBalance);
         // 1 history-conteiner k dore niye asbo 
-        //
-    }else{
-        alert ("Invalid Pin");
+
+        const history = document.getElementById("history-conteiner");
+        // 2 new div create korbo
+        const newHistory = document.createElement("div");
+        /// 3 new div inerhtml add korbo
+        newHistory.innerHTML = `
+         <div class="transaction-card p-5 bg-base-100">
+         Add Money Success From
+          ${BankAccount}  , acc-no ${ADDMoneyNumber} at ${new Date()}
+            </div>
+        `;
+        //4 history container er modde new div append korbo
+        history.appendChild(newHistory);
+    } else {
+        alert("Invalid Pin");
         return;
 
     }

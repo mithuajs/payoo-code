@@ -22,8 +22,21 @@ document.getElementById('cashout-btn')
 
         const pin = getValueFromInput('cashout-pin');
         if (pin === '1212') {
-            alert("cashout successful")
+            alert(`  Cashout ${CashoutAmountString} Taka Success to ${CashoutAgentNumber} at ${new Date()}`);
             SetBalance(newBalance);
+
+            // 1 history-conteiner k dore niye asbo 
+            const history = document.getElementById("history-conteiner");
+            // 2 new div create korbo
+            const newHistory = document.createElement("div");
+            /// 3 new div inerhtml add korbo
+            newHistory.innerHTML = `
+         <div class="transaction-card p-5 bg-base-100">
+           Cashout ${CashoutAmountString} Taka Success to ${CashoutAgentNumber} at ${new Date()}
+            </div>
+        `;
+            //4 history container er modde new div append korbo
+            history.appendChild(newHistory);
         } else {
             alert("invalid pin")
             return;

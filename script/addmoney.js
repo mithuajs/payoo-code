@@ -24,7 +24,7 @@ document.getElementById("addMoney-btn").addEventListener("click", function () {
 
     const pin = getValueFromInput("add-money-pin");
     if (pin === "1212") {
-        alert(`Add Money Success From ${BankAccount} at ${new Date()}`);
+        alert(`Add Money ${ADDMoneyAmount} Taka Success From ${BankAccount} at ${new Date()}`);
         SetBalance(NewBalance);
         // 1 history-conteiner k dore niye asbo 
 
@@ -34,7 +34,7 @@ document.getElementById("addMoney-btn").addEventListener("click", function () {
         /// 3 new div inerhtml add korbo
         newHistory.innerHTML = `
          <div class="transaction-card p-5 bg-base-100">
-         Add Money Success From
+         Add Money  ${ADDMoneyAmount} Taka Success From
           ${BankAccount}  , acc-no ${ADDMoneyNumber} at ${new Date()}
             </div>
         `;
